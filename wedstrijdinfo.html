@@ -1,0 +1,207 @@
+<!doctype html>
+<!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zxx"> <![endif]-->
+<!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang="zxx"> <![endif]-->
+<!--[if IE 8]>			<html class="no-js lt-ie9" lang="zxx"> <![endif]-->
+<!--[if gt IE 8]><!-->	<html class="no-js" lang="zxx"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<!--<meta http-equiv="refresh" content="120;url=uitslagen.html" />-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="refresh" content="120">
+	<title>W.V.V. 1896 - Wedstrijd Informatie</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/customScrollbar.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/color.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/sponsor.css">
+	<link rel="stylesheet" href="css/flickity.min.css">
+	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body>
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<!--************************************
+			Wrapper Start
+	*************************************-->
+	<div id="tg-wrapper" class="tg-wrapper tg-haslayout">
+
+		<!--************************************
+				Header Start
+		*************************************-->
+		<header id="tg-header" class="tg-header tg-haslayout">
+			<div class="container">
+				<div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+					<div class="row">
+						<div class="tg-topbar tg-haslayout">
+							<nav id="tg-topaddnav" class="tg-topaddnav">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tg-addnavigationm-mobile">
+										<i class="fa fa-arrow-right"></i>
+									</button>
+								</div>
+								<div id="tg-addnavigationm-mobile" class="tg-addnavigationm-mobile collapse navbar-collapse">
+									<div class="tg-colhalf pull-right">
+										<nav class="tg-addnav">
+										</nav>
+									</div>
+								</div>
+							</nav>
+						</div>
+						<nav id="tg-nav" class="tg-nav brand-center">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tg-navigationm-mobile">
+									<i class="fa fa-bars"></i>
+								</button>
+								<strong class="tg-logo">
+									<a href="#"><img src="images/logo.png" alt="image description"></a>
+								</strong>
+							</div>
+							<div id="tg-navigation" class="tg-navigation">
+								<div class="tg-colhalf"></div>
+								<div class="tg-colhalf"></div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--************************************
+				Header End
+		*************************************-->
+		<!--************************************
+				Banner Start
+		*************************************-->
+		<div class="tg-banner tg-haslayout">
+			<div class="tg-imglayer">
+				<img src="images/bg-pattran.png" alt="image desctription">
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="tg-banner-content tg-haslayout">
+						<div class="tg-pagetitle">
+							<h1>Wedstrijd	Info</h1>
+						</div>
+						<ol class="tg-breadcrumb">
+							<li class="active"><!--Wedstrijd programma komende 5 dagen--></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--************************************
+				Banner End
+		*************************************-->
+		<!--************************************
+				Main Start
+		*************************************-->
+		<main id="tg-main" class="tg-main tg-haslayout">
+			<section class="tg-main-section tg-haslayout">
+				<div class="container biggerContainer">
+					<div class="tg-section-name">
+						<h2>Wedstrijden Informatie</h2>
+					</div>
+					<div class="col-sm-11 col-xs-11 pull-right ulContainer">
+						<div id="ulContent" class="row ulContent tableMatchInfo">
+							<table class="article programma">
+								<thead>
+									<tr>
+										<th>
+											<span class="datetime">Aanvang</span>
+										</th>
+										<th>
+											<span class="string">Thuisteam</span>
+										</th>
+										<th>
+											<span class="string">Thuisteam kleedkamer</span>
+										</th>
+										<th>
+											<span class="string">Uitteam</span>
+										</th>
+										<th>
+											<span class="string">Uitteam kleedkamer</span>
+										</th>
+										<th>
+											<span class="string">Wedstrijd veld</span>
+										</th>
+									</tr>
+								</thead>
+								<tbody id="matchInfoTable"> <!-- data-autoscroll-->
+									<!-- Komt vanuit JavaScript!! FetchProgram Functie -->
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!--************************************
+				Main End
+		*************************************-->
+		<!--************************************
+				Footer Start
+		*************************************-->
+		<footer id="tg-footer" class="tg-footer tg-haslayout">
+			<div class="tg-footerbar">
+				<div class="container sponsorShow">
+					<div class="slideshow js-slideshow">
+						<div class="slide"><img src="images/sponsor/rse_bev.svg"></div>
+						<div class="slide"><img src="images/sponsor/rse_tel.png"></div>
+						<div class="slide"><img src="images/sponsor/jumbojan.png"></div>
+						<div class="slide"><img src="images/sponsor/hyzon.png"></div>
+						<div class="slide"><img src="images/sponsor/top1toys.png"></div>
+						<div class="slide"><img src="images/sponsor/keepersfabriek.png"></div>
+						<div class="slide"><img src="images/sponsor/detreffer.png"></div>
+						<div class="slide"><span>Wilt u ook hier staan? Bel 06-37545808</span></div>
+						<div class="slide"><img src="images/sponsor/muuroloog.png"></div>
+						<div class="slide"><img src="images/sponsor/hofman.png"></div>
+						<div class="slide"><img src="images/sponsor/stukaschuur.jpg"></div>
+						<div class="slide"><img src="images/sponsor/soko.png"></div>
+						<div class="slide"><img src="images/sponsor/schrantee.png"></div>
+						<div class="slide"><img src="images/sponsor/rghandschoenen.png"></div>
+						<div class="slide"><img src="images/sponsor/caravan_centrum_oldambt.jpg"></div>
+						<div class="slide"><img src="images/sponsor/hartman.png"></div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--************************************
+				Footer End
+		*************************************-->
+	</div>
+	<!--************************************
+			Wrapper End
+	*************************************-->
+
+	<script src="js/vendor/jquery-library.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/sportlink_fetching.js"></script>
+	<script src="js/jquery.autoscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/flickity.pkgd.min.js"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/pageRefresh.js"></script>
+
+	<script>
+		if (document.cookie.indexOf('height=') == '-1'){
+			fetchMatchInformation();
+			location.reload();
+		}
+		fetchMatchInformation();
+
+		refreshAt(06,00,0); //Will refresh the page at 06:00 in the morning
+	</script>
+
+</body>
+
+</html>
