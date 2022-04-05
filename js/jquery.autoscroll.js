@@ -1,13 +1,10 @@
 (function test($) {
-	cookieCheck = document.cookie.indexOf('height=');
-	let cookieScroll = document.cookie.split('=');
-
+	let cookieScroll = ('; '+document.cookie).split(`; height=`).pop().split(';')[0];
 	$.fn.autoscroll = function(options) {
 		var settings = $.extend({}, $.fn.autoscroll.defaults, options);
 		return this.each(function() {
 			var $this = $(this);
-
-			if ($this.length > 0 && cookieScroll[1] > $this[0].clientHeight) {
+			if ($this.length > 0 && cookieScroll > $this[0].clientHeight) {
 				var scrollTimer,
 					scrollTop = 0;
 

@@ -167,11 +167,14 @@
 	<script src="js/carousel.js"></script>
 
 	<script>
-		if (document.cookie.indexOf('height=') == '-1'){
-			fetchProgramma();
-			location.reload();
-		}
+	const heightChecker = ('; '+document.cookie).split(`; height=`).pop().split(';')[0];
+		
+	if (typeof heightChecker === 'undefined') {
 		fetchProgramma();
+		location.reload();
+	}
+		
+	fetchProgramma();
 	</script>
 
 </body>

@@ -191,12 +191,14 @@
 	<script src="js/flickity.pkgd.min.js"></script>
 	<script src="js/carousel.js"></script>
 	<script src="js/pageRefresh.js"></script>
-
 	<script>
-		if (document.cookie.indexOf('height=') == '-1'){
+		const heightChecker = ('; '+document.cookie).split(`; height=`).pop().split(';')[0];
+			
+		if (typeof heightChecker === 'undefined') {
 			fetchMatchInformation();
 			location.reload();
 		}
+			
 		fetchMatchInformation();
 
 		refreshAt(06,00,0); //Will refresh the page at 06:00 in the morning

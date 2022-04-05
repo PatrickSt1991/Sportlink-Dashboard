@@ -1,0 +1,63 @@
+<style>
+/* General */
+
+button, code {display: block;margin: 30px auto}
+
+/* Code */
+
+code {
+    background-color: antiquewhite;
+    color: dimgrey;
+    height: 100px;
+    width: 300px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 40px;
+    font-weight: bold;
+    border-left: 15px solid olivedrab
+}
+
+/* Button */
+
+button {
+    background-color: olivedrab;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 7px 13px;
+    font-family: Tahoma;
+    font-size: 20px;
+    cursor:pointer
+}
+button:hover {background-color: #87ba1d;}
+button:active {background-color: #4e6d0f;}
+</style>
+<script>
+function generateSerial() {
+    
+    'use strict';
+    
+    var chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+        
+        serialLength = 10,
+        
+        randomSerial = "",
+        
+        i,
+        
+        randomNumber;
+    
+    for (i = 0; i < serialLength; i = i + 1) {
+        
+        randomNumber = Math.floor(Math.random() * chars.length);
+        
+        randomSerial += chars.substring(randomNumber, randomNumber + 1);
+        
+    }
+    
+    document.getElementById('serial').innerHTML = randomSerial;
+    
+}
+</script>
+<code id="serial"></code>
+<button id="generate" onclick="generateSerial()">Generate Serial Number</button>
