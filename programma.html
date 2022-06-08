@@ -137,7 +137,6 @@
 						<div class="slide"><img src="images/sponsor/top1toys.png"></div>
 						<div class="slide"><img src="images/sponsor/keepersfabriek.png"></div>
 						<div class="slide"><img src="images/sponsor/detreffer.png"></div>
-						<div class="slide"><span>Wilt u ook hier staan? Bel 06-37545808</span></div>
 						<div class="slide"><img src="images/sponsor/muuroloog.png"></div>
 						<div class="slide"><img src="images/sponsor/hofman.png"></div>
 						<div class="slide"><img src="images/sponsor/stukaschuur.jpg"></div>
@@ -167,14 +166,25 @@
 	<script src="js/carousel.js"></script>
 
 	<script>
+		if (document.cookie.indexOf('height=') == '-1'){
+			championChecker();
+			fetchProgramma();
+			location.reload();
+		}
+		championChecker();
+		fetchProgramma();
+	/*
 	const heightChecker = ('; '+document.cookie).split(`; height=`).pop().split(';')[0];
-		
+	
 	if (typeof heightChecker === 'undefined') {
+		championChecker();
 		fetchProgramma();
 		location.reload();
 	}
-		
+	
+	championChecker();
 	fetchProgramma();
+	*/
 	</script>
 
 </body>

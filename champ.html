@@ -5,9 +5,9 @@
 <!--[if gt IE 8]><!-->	<html class="no-js" lang="zxx"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="refresh" content="120;url=programma.html" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>W.V.V. 1896 - Wedstrijd uitslagen</title>
+	<meta http-equiv="refresh" content="120;url=uitslagen.html" />
+	<title>W.V.V. 1896 - Kampioen</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -24,9 +24,22 @@
 	<link rel="stylesheet" href="css/responsive.css">
 	<link rel="stylesheet" href="css/sponsor.css">
 	<link rel="stylesheet" href="css/flickity.min.css">
-
 	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
+<style>
+.column_temp_right{
+  float: right;
+  width: 25%;
+}
+
+.column_temp_left{
+  float: left;
+  width: 75%;
+}
+tr:first-child{
+    color: #daa520;
+}
+</style>
 <body>
 	<!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -69,7 +82,7 @@
 							</div>
 							<div id="tg-navigation" class="tg-navigation">
 								<div class="tg-colhalf"></div>
-                <div class="tg-colhalf"></div>
+								<div class="tg-colhalf"></div>
 							</div>
 						</nav>
 					</div>
@@ -90,7 +103,7 @@
 				<div class="row">
 					<div class="tg-banner-content tg-haslayout">
 						<div class="tg-pagetitle">
-							<h1>Uitslagen</h1>
+							<h1>Kampioen</h1>
 						</div>
 						<ol class="tg-breadcrumb">
 							<li class="active"><!--Wedstrijd uitslagen--></li>
@@ -107,16 +120,56 @@
 		*************************************-->
 		<main id="tg-main" class="tg-main tg-haslayout">
 			<section class="tg-main-section tg-haslayout">
-				<!--<div class="container">-->
-				<div class="container biggerContainer">
-					<div class="tg-section-name">
-						<h2>Wedstrijd uitslagen</h2>
-					</div>
+				<div class="container biggerContainer" style="width:100%;">
 					<div class="col-sm-11 col-xs-11 pull-right ulContainer">
-						<div id="ulContent" class="row ulContent">
-							<ul id="match_results" class="tg-tickets tg-tabnav data-list" role="tablist" data-autoscroll>
-								<!-- Komt vanuit JavaScript!! fetchMatchResults Functie -->
-							</ul>
+						<div id="ulContent" class="row ulContent tableMatchInfo">
+							<div class="column_temp_left">
+								<table class="article programma" style="font-size:18px;">
+									<thead>
+										<tr>
+											<th>
+												<span class="datetime">#</span>
+											</th>
+											<th>
+												<span class="string">Team</span>
+											</th>
+											<th>
+												<span class="string">Gespeeld</span>
+											</th>
+											<th>
+												<span class="string">Gewonnen</span>
+											</th>
+											<th>
+												<span class="string">Gelijk</span>
+											</th>
+											<th>
+												<span class="string">Verloren</span>
+											</th>
+											<th>
+												<span class="string">Doelpunten voor</span>
+											</th>
+											<th>
+												<span class="string">Doelpunten tegen</span>
+											</th>
+											<th>
+												<span class="string">Doelsaldo</span>
+											</th>
+											<th>
+												<span class="string">Punten</span>
+											</th>
+										</tr>
+									</thead>
+									<tbody id="championInfoTable"> <!-- data-autoscroll-->
+										<!-- Komt vanuit JavaScript!! FetchProgram Functie -->
+									</tbody>
+								</table>
+							</div>
+							<div class="column_temp_right">
+								<img src="images/zondag2_schaal.jpeg" style="max-width:87%; margin-left: 65px; margin-top: 150px;">
+							</div>
+							<div>
+								<img src="images/sponsor_zondag2.png">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -158,22 +211,28 @@
 	<!--************************************
 			Wrapper End
 	*************************************-->
+
 	<script src="js/vendor/jquery-library.js"></script>
 	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
 	<script src="js/sportlink_fetching.js"></script>
 	<script src="js/jquery.autoscroll.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/flickity.pkgd.min.js"></script>
 	<script src="js/carousel.js"></script>
-
+	<script src="js/pageRefresh.js"></script>
 	<script>
-		if (document.cookie.indexOf('height=') == '-1'){
+		const heightChecker = ('; '+document.cookie).split(`; height=`).pop().split(';')[0];
+			
+		if (typeof heightChecker === 'undefined') {
 			championChecker();
-			fetchMatchResults();
+			weAreTheChampions();
 			location.reload();
 		}
 		championChecker();
-		fetchMatchResults();
+		weAreTheChampions();
+		refreshAt(06,00,0); //Will refresh the page at 06:00 in the morning
 	</script>
+
 </body>
 
 </html>
